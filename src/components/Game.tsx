@@ -112,21 +112,19 @@ export function Game() {
       />
 
       <div className="relative flex min-h-0 flex-1 flex-col">
-        <div
-          className="absolute inset-0 bg-[#07080c]"
-          style={
-            bg
-              ? {
-                  backgroundImage: `url(${bg})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }
-              : undefined
-          }
-        />
-        {rt.snapshot.background === 'black' || !bg ? (
-          <div className="absolute inset-0 bg-[#07080c]" />
-        ) : null}
+        <div className="absolute inset-0 overflow-hidden bg-[#07080c]">
+          {bg && rt.snapshot.background !== 'black' ? (
+            <img
+              key={bg}
+              src={bg}
+              alt=""
+              className={cn(
+                'pointer-events-none absolute inset-0 h-full w-full select-none object-cover',
+                rt.settings.reducedMotion ? '' : 'fade-in',
+              )}
+            />
+          ) : null}
+        </div>
 
         {showSprite && playing ? (
           <img
