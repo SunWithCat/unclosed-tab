@@ -1,0 +1,35 @@
+{
+  "name": "unclosed-tab",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "未关闭的标签 — a short browser-native galgame",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 46217",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview --host 0.0.0.0 --port 46217"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-slider": "^1.2.2",
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.544.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "tailwindcss": "^4.1.13",
+    "@tailwindcss/vite": "^4.1.13",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}
